@@ -48,7 +48,7 @@ export function TeamMemberProfile({ member }: TeamMemberProfileProps) {
             <h2>About</h2>
             <p>{member.fullBio}</p>
 
-            {member.achievements && (
+            {/* {member.achievements && (
               <>
                 <h2>Key Achievements</h2>
                 <ul>
@@ -68,7 +68,7 @@ export function TeamMemberProfile({ member }: TeamMemberProfileProps) {
                   ))}
                 </ul>
               </>
-            )}
+            )} */}
           </div>
         </div>
 
@@ -99,7 +99,7 @@ export function TeamMemberProfile({ member }: TeamMemberProfileProps) {
                 </div>
               </div>
 
-              {member.socialLinks && (
+              {/* {member.socialLinks && (
                 <div className="flex gap-2">
                   {member.socialLinks.linkedin && (
                     <Button variant="outline" size="icon" asChild>
@@ -126,7 +126,7 @@ export function TeamMemberProfile({ member }: TeamMemberProfileProps) {
                     </Button>
                   )}
                 </div>
-              )}
+              )} */}
             </CardContent>
           </Card>
 

@@ -37,7 +37,7 @@ export const products: Product[] = [
     id: '2',
     name: 'Advanced Medical Vacuum Pump',
     description: 'Efficient vacuum pump for critical medical applications.',
-    category: 'medical',
+    category: 'industrial',
     price: 'Please contact us',
     specifications: [
       { name: 'Flow Rate', value: '50 L/min' },
