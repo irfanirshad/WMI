@@ -48,7 +48,7 @@ export const products: Product[] = [
       url: 'https://images.unsplash.com/photo-1579684288402-e3e337bcc7af',
       alt: 'Medical Vacuum Pump'
     }],
-    brochureUrl: '/brochures/getinge'
+    brochureUrl: '/brochures/getinge.pdf'
   },
   {
     id: '3',
@@ -65,7 +65,7 @@ export const products: Product[] = [
       url: 'https://images.unsplash.com/photo-1583912372139-6a46eb6eb119',
       alt: 'Ultra Filter System'
     }],
-    brochureUrl: '/brochures/getinge'
+    brochureUrl: '/brochures/getinge.pdf'
   },
   {
     id: '4',

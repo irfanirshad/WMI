@@ -22,7 +22,7 @@ export const teamMembers: TeamMember[] = [
     role: "Technical Manager",
     shortBio: "Technical Manager at Watad Medical.",
     fullBio: "Eng. Haroon Hamdan oversees technical operations and strategies at Watad Medical Establishment, focusing on medical and industrial solutions.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+    image: "/imgs/haroon.jpg",
     isManager: true,
     contact: {
       email: "haroonhamdan@watad-sa.com",
