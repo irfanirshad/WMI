@@ -21,7 +21,7 @@ interface Service {
   icon: LucideIcon;
 }
 
-export const SERVICES: Service[] = [
+export const SERVICES: ReadonlyArray<Service> = [
   {
     title: 'Medical Equipment',
     description: 'State-of-the-art medical devices and equipment for healthcare facilities',
