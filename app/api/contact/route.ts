@@ -25,23 +25,24 @@
 import { NextResponse } from 'next/server';
 import { contactSchema } from '@/lib/validations/contact';
 
-// Ensure this route is always dynamic
-export const dynamic = true;
-
+// API POST endpoint
 export async function POST(request: Request) {
   try {
     const body = await request.json(); // Parse the request payload
-    const validatedData = contactSchema.parse(body);
+    const validatedData = contactSchema.parse(body); // Validate data using the schema
 
     console.log('Valid Data:', validatedData);
 
-    return NextResponse.json(validatedData, { status: 201 });
+    return NextResponse.json(
+      { message: 'Form submission successful', data: validatedData },
+      { status: 201 }
+    );
   } catch (error: any) {
     console.error('Error parsing or validating contact request:', error);
 
     return NextResponse.json(
       { error: error?.errors?.[0]?.message || 'Internal Server Error' },
-      { status: error?.errors ? 400 : 500 }
+      { status: 400 }
     );
   }
 }
