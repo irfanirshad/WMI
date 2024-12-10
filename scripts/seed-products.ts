@@ -1,5 +1,5 @@
-import connectDB from '@/lib/db/connect';
-import Product from '@/lib/db/models/Product';
+// import connectDB from '@/lib/db/connect';
+// import Product from '@/lib/db/models/Product';
 
 const PRODUCTS = [
   {
@@ -18,7 +18,7 @@ const PRODUCTS = [
         alt: 'Advanced MRI Scanner',
       },
     ],
-    brochureUrl: '/brochures/mri-scanner.pdf',
+    brochureUrl: '/brochures/getinge-2.pdf',
   },
   {
     name: 'Medical Gas Pipeline System',
@@ -36,7 +36,7 @@ const PRODUCTS = [
         alt: 'Medical Gas Pipeline System',
       },
     ],
-    brochureUrl: '/brochures/gas-pipeline.pdf',
+    brochureUrl: '/brochures/getinge-2.pdf',
   },
   {
     name: 'CSSD Sterilizer',
@@ -54,7 +54,7 @@ const PRODUCTS = [
         alt: 'CSSD Sterilizer',
       },
     ],
-    brochureUrl: '/brochures/sterilizer.pdf',
+    brochureUrl: '/brochures/getinge-2.pdf',
   },
   {
     name: 'Patient Monitor',
@@ -72,26 +72,26 @@ const PRODUCTS = [
         alt: 'Patient Monitor',
       },
     ],
-    brochureUrl: '/brochures/patient-monitor.pdf',
+    brochureUrl: '/brochures/getinge-2.pdf',
   },
 ];
 
-async function seedProducts() {
-  try {
-    await connectDB();
+// async function seedProducts() {
+//   try {
+//     await connectDB();
     
-    // Clear existing products
-    await Product.deleteMany({});
+//     // Clear existing products
+//     await Product.deleteMany({});
     
-    // Insert new products
-    await Product.insertMany(PRODUCTS);
+//     // Insert new products
+//     await Product.insertMany(PRODUCTS);
     
-    console.log('Successfully seeded products database');
-    process.exit(0);
-  } catch (error) {
-    console.error('Error seeding database:', error);
-    process.exit(1);
-  }
-}
+//     console.log('Successfully seeded products database');
+//     process.exit(0);
+//   } catch (error) {
+//     console.error('Error seeding database:', error);
+//     process.exit(1);
+//   }
+// }
 
-seedProducts();
+// seedProducts();

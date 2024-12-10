@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   description: string;
   category: string;
-  price: number;
+  price: string;
   specifications: Array<{
     name: string;
     value: string;
@@ -18,51 +18,88 @@ export interface Product {
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Advanced MRI Scanner Pro X1',
-    description: 'State-of-the-art 3T MRI scanner with AI-powered imaging capabilities.',
+    name: 'Liquid Oxygen Storage Tank 5000L',
+    description: 'High-capacity liquid oxygen tank designed for hospitals and healthcare facilities.',
     category: 'medical',
-    price: 1200000,
+    price: 'Please contact us',
     specifications: [
-      { name: 'Field Strength', value: '3.0 Tesla' },
-      { name: 'Bore Size', value: '70cm' },
-      { name: 'AI Features', value: 'Advanced image reconstruction, Automatic positioning' }
+      { name: 'Capacity', value: '5000 Liters' },
+      { name: 'Material', value: 'Stainless Steel' },
+      { name: 'Compliance', value: 'ISO 9001, CE Marked' }
     ],
     images: [{
-      url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
-      alt: 'MRI Scanner Pro X1'
+      url: 'https://images.unsplash.com/photo-1583912372139-6a46eb6eb119',
+      alt: 'Liquid Oxygen Storage Tank'
     }],
-    brochureUrl: '/brochures/mri-scanner-x1.pdf'
+    brochureUrl: '/brochures/getinge-1.pdf'
   },
   {
     id: '2',
-    name: 'Digital X-Ray System DX2000',
-    description: 'High-resolution digital X-ray system with wireless detector.',
+    name: 'Advanced Medical Vacuum Pump',
+    description: 'Efficient vacuum pump for critical medical applications.',
     category: 'medical',
-    price: 85000,
+    price: 'Please contact us',
     specifications: [
-      { name: 'Resolution', value: '3.6 lp/mm' },
-      { name: 'Detector Size', value: '43cm x 43cm' },
-      { name: 'Preview Time', value: '2 seconds' }
+      { name: 'Flow Rate', value: '50 L/min' },
+      { name: 'Noise Level', value: 'Less than 60 dB' },
+      { name: 'Compliance', value: 'HTM 2022 Certified' }
     ],
     images: [{
-      url: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8',
-      alt: 'Digital X-Ray System'
-    }]
+      url: 'https://images.unsplash.com/photo-1579684288402-e3e337bcc7af',
+      alt: 'Medical Vacuum Pump'
+    }],
+    brochureUrl: '/brochures/getinge'
   },
   {
     id: '3',
-    name: 'Automated CSSD System',
-    description: 'Fully automated central sterile supply department system.',
+    name: 'Donaldson Ultra Filter System',
+    description: 'Advanced air filtration system for medical gas plants.',
     category: 'medical',
-    price: 150000,
+    price: 'Please contact us',
     specifications: [
-      { name: 'Capacity', value: '500L' },
-      { name: 'Cycle Time', value: '25-45 minutes' },
-      { name: 'Display', value: '10" Touch Screen' }
+      { name: 'Efficiency', value: '99.9% at 0.1 Micron' },
+      { name: 'Capacity', value: '300 m³/h' },
+      { name: 'Material', value: 'Aluminum and Polypropylene' }
     ],
     images: [{
-      url: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
-      alt: 'CSSD System'
-    }]
+      url: 'https://images.unsplash.com/photo-1583912372139-6a46eb6eb119',
+      alt: 'Ultra Filter System'
+    }],
+    brochureUrl: '/brochures/getinge'
+  },
+  {
+    id: '4',
+    name: 'Automated Medical Gas Manifold',
+    description: 'Reliable and automated manifold for oxygen and N2O distribution.',
+    category: 'medical',
+    price: 'Please contact us',
+    specifications: [
+      { name: 'Gas Types Supported', value: 'Oxygen, N2O, Medical Air' },
+      { name: 'Capacity', value: '10 Cylinders' },
+      { name: 'Control', value: 'Fully Automated' }
+    ],
+    images: [{
+      url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
+      alt: 'Medical Gas Manifold'
+    }],
+    brochureUrl: '/brochures/getinge.pdf'
+  },
+  {
+    id: '5',
+    name: 'Medical Outlet Panel with Digital Indicators',
+    description: 'Wall-mounted medical gas outlet with integrated pressure indicators.',
+    category: 'medical',
+    price: 'Please contact us',
+    specifications: [
+      { name: 'Supported Gases', value: 'Oxygen, N2O, Vacuum, Air' },
+      { name: 'Display', value: 'Digital Pressure Readout' },
+      { name: 'Material', value: 'High-Grade Plastic' }
+    ],
+    images: [{
+      url: 'https://plus.unsplash.com/premium_photo-1682145152082-b2a19dd292fb',
+      alt: 'Medical Outlet Panel'
+    }],
+    brochureUrl: '/brochures/getinge.pdf'
   }
 ];
+

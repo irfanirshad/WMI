@@ -27,9 +27,9 @@ export function ProductCard({ product }: ProductCardProps) {
       </CardHeader>
       <CardContent className="flex-1">
         <p className="text-muted-foreground line-clamp-3">{product.description}</p>
-        <p className="mt-4 font-semibold text-lg">
-          ${product.price.toLocaleString()}
-        </p>
+        {/* <p className="mt-4 font-semibold text-lg">
+          {product.price.toLocaleString()}
+        </p> */}
       </CardContent>
       <CardFooter>
         <Button asChild className="w-full">

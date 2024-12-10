@@ -33,9 +33,9 @@ const GALLERY_ITEMS = [
   },
   {
     id: 4,
-    title: 'Manufacturing Plant',
+    title: 'Wellness Operating Theatre',
     category: 'industrial',
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-c6a89f4742a5',
+    imageUrl: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
     description: 'Industrial manufacturing facility',
   },
   // Add more items as needed

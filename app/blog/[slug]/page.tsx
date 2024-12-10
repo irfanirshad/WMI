@@ -31,3 +31,4 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   return <BlogPost post={post} />;
 }
+

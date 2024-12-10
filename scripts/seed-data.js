@@ -1,51 +1,51 @@
-const mongoose = require('mongoose');
-require('dotenv').config({ path: '.env.local' });
+// const mongoose = require('mongoose');
+// require('dotenv').config({ path: '.env.local' });
 
-// Product Schema
-const productSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  category: { type: String, required: true, enum: ['medical', 'industrial'] },
-  specifications: [{ name: String, value: String }],
-  images: [{ url: String, alt: String }],
-  brochureUrl: String,
-  price: { type: Number, required: true },
-  inStock: { type: Boolean, default: true },
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now }
-});
+// // Product Schema
+// const productSchema = new mongoose.Schema({
+//   name: { type: String, required: true },
+//   description: { type: String, required: true },
+//   category: { type: String, required: true, enum: ['medical', 'industrial'] },
+//   specifications: [{ name: String, value: String }],
+//   images: [{ url: String, alt: String }],
+//   brochureUrl: String,
+//   price: { type: Number, required: true },
+//   inStock: { type: Boolean, default: true },
+//   createdAt: { type: Date, default: Date.now },
+//   updatedAt: { type: Date, default: Date.now }
+// });
 
-// Blog Schema
-const blogSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  slug: { type: String, required: true, unique: true },
-  content: { type: String, required: true },
-  excerpt: { type: String, required: true },
-  author: { name: String, image: String },
-  coverImage: { url: String, alt: String },
-  category: { type: String, required: true },
-  publishedAt: { type: Date, default: Date.now },
-  createdAt: { type: Date, default: Date.now }
-});
+// // Blog Schema
+// const blogSchema = new mongoose.Schema({
+//   title: { type: String, required: true },
+//   slug: { type: String, required: true, unique: true },
+//   content: { type: String, required: true },
+//   excerpt: { type: String, required: true },
+//   author: { name: String, image: String },
+//   coverImage: { url: String, alt: String },
+//   category: { type: String, required: true },
+//   publishedAt: { type: Date, default: Date.now },
+//   createdAt: { type: Date, default: Date.now }
+// });
 
-// Project Schema
-const projectSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  client: { name: String, location: String },
-  category: { type: String, required: true, enum: ['medical', 'industrial'] },
-  images: [{ url: String, alt: String }],
-  completionDate: Date,
-  testimonial: {
-    content: String,
-    author: String,
-    position: String
-  }
-});
+// // Project Schema
+// const projectSchema = new mongoose.Schema({
+//   title: { type: String, required: true },
+//   description: { type: String, required: true },
+//   client: { name: String, location: String },
+//   category: { type: String, required: true, enum: ['medical', 'industrial'] },
+//   images: [{ url: String, alt: String }],
+//   completionDate: Date,
+//   testimonial: {
+//     content: String,
+//     author: String,
+//     position: String
+//   }
+// });
 
-const Product = mongoose.models.Product || mongoose.model('Product', productSchema);
-const Blog = mongoose.models.Blog || mongoose.model('Blog', blogSchema);
-const Project = mongoose.models.Project || mongoose.model('Project', projectSchema);
+// const Product = mongoose.models.Product || mongoose.model('Product', productSchema);
+// const Blog = mongoose.models.Blog || mongoose.model('Blog', blogSchema);
+// const Project = mongoose.models.Project || mongoose.model('Project', projectSchema);
 
 // Sample Data
 const PRODUCTS = [
@@ -53,7 +53,7 @@ const PRODUCTS = [
     name: 'Advanced MRI Scanner Pro X1',
     description: 'State-of-the-art 3T MRI scanner with AI-powered imaging capabilities.',
     category: 'medical',
-    price: 1200000,
+    price: "Please contact us",
     specifications: [
       { name: 'Field Strength', value: '3.0 Tesla' },
       { name: 'Bore Size', value: '70cm' },
@@ -69,7 +69,7 @@ const PRODUCTS = [
     name: 'Digital X-Ray System DX2000',
     description: 'High-resolution digital X-ray system with wireless detector.',
     category: 'medical',
-    price: 85000,
+    price: "Please contact us",
     specifications: [
       { name: 'Resolution', value: '3.6 lp/mm' },
       { name: 'Detector Size', value: '43cm x 43cm' },
@@ -79,13 +79,13 @@ const PRODUCTS = [
       url: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8',
       alt: 'Digital X-Ray System'
     }],
-    brochureUrl: '/brochures/dx2000.pdf'
+    brochureUrl: '/brochures/mri-scanner-x1.pdf'
   },
   {
     name: 'Automated CSSD System',
     description: 'Fully automated central sterile supply department system.',
     category: 'medical',
-    price: 150000,
+    price: "Please contact us",
     specifications: [
       { name: 'Capacity', value: '500L' },
       { name: 'Cycle Time', value: '25-45 minutes' },
@@ -95,7 +95,7 @@ const PRODUCTS = [
       url: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
       alt: 'CSSD System'
     }],
-    brochureUrl: '/brochures/cssd-auto.pdf'
+    brochureUrl: '/brochures/getinge-2.pdf'
   }
 ];
 
@@ -173,32 +173,32 @@ const PROJECTS = [
   }
 ];
 
-async function seedDatabase() {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI);
-    console.log('Connected to MongoDB');
+// async function seedDatabase() {
+//   try {
+//     await mongoose.connect(process.env.MONGODB_URI);
+//     console.log('Connected to MongoDB');
 
-    // Clear existing data
-    await Promise.all([
-      Product.deleteMany({}),
-      Blog.deleteMany({}),
-      Project.deleteMany({})
-    ]);
-    console.log('Cleared existing data');
+//     // Clear existing data
+//     await Promise.all([
+//       Product.deleteMany({}),
+//       Blog.deleteMany({}),
+//       Project.deleteMany({})
+//     ]);
+//     console.log('Cleared existing data');
 
-    // Insert new data
-    await Promise.all([
-      Product.insertMany(PRODUCTS),
-      Blog.insertMany(BLOGS),
-      Project.insertMany(PROJECTS)
-    ]);
-    console.log('Successfully seeded database');
+//     // Insert new data
+//     await Promise.all([
+//       Product.insertMany(PRODUCTS),
+//       Blog.insertMany(BLOGS),
+//       Project.insertMany(PROJECTS)
+//     ]);
+//     console.log('Successfully seeded database');
 
-    process.exit(0);
-  } catch (error) {
-    console.error('Error seeding database:', error);
-    process.exit(1);
-  }
-}
+//     process.exit(0);
+//   } catch (error) {
+//     console.error('Error seeding database:', error);
+//     process.exit(1);
+//   }
+// }
 
-seedDatabase();
+// seedDatabase();

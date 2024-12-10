@@ -19,7 +19,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{product.name}</h1>
             <p className="text-muted-foreground mt-2">{product.description}</p>
-            <p className="mt-4 text-2xl font-bold">${product.price.toLocaleString()}</p>
+            {/* <p className="mt-4 text-2xl font-bold">{product.price.toLocaleString()}</p> */}
           </div>
 
           <div className="relative aspect-video w-full overflow-hidden rounded-lg">

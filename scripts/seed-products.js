@@ -1,45 +1,45 @@
-const mongoose = require('mongoose');
-require('dotenv').config({ path: '.env.local' });
+// const mongoose = require('mongoose');
+// require('dotenv').config({ path: '.env.local' });
 
-if (!process.env.MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
-}
+// if (!process.env.MONGODB_URI) {
+//   throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+// }
 
-const productSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  category: {
-    type: String,
-    required: true,
-    enum: ['medical', 'industrial'],
-  },
-  specifications: [{
-    name: String,
-    value: String,
-  }],
-  images: [{
-    url: String,
-    alt: String,
-  }],
-  brochureUrl: String,
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now,
-  },
-});
+// const productSchema = new mongoose.Schema({
+//   name: {
+//     type: String,
+//     required: true,
+//     trim: true,
+//   },
+//   description: {
+//     type: String,
+//     required: true,
+//   },
+//   category: {
+//     type: String,
+//     required: true,
+//     enum: ['medical', 'industrial'],
+//   },
+//   specifications: [{
+//     name: String,
+//     value: String,
+//   }],
+//   images: [{
+//     url: String,
+//     alt: String,
+//   }],
+//   brochureUrl: String,
+//   createdAt: {
+//     type: Date,
+//     default: Date.now,
+//   },
+//   updatedAt: {
+//     type: Date,
+//     default: Date.now,
+//   },
+// });
 
-const Product = mongoose.models.Product || mongoose.model('Product', productSchema);
+// const Product = mongoose.models.Product || mongoose.model('Product', productSchema);
 
 const PRODUCTS = [
   {
@@ -76,7 +76,7 @@ const PRODUCTS = [
         alt: 'Medical Gas Pipeline System',
       },
     ],
-    brochureUrl: '/brochures/gas-pipeline.pdf',
+    brochureUrl: '/brochures/getinge.pdf',
   },
   {
     name: 'CSSD Sterilizer',
@@ -94,7 +94,7 @@ const PRODUCTS = [
         alt: 'CSSD Sterilizer',
       },
     ],
-    brochureUrl: '/brochures/sterilizer.pdf',
+    brochureUrl: '/brochures/getinge.pdf',
   },
   {
     name: 'Patient Monitor',
@@ -112,28 +112,28 @@ const PRODUCTS = [
         alt: 'Patient Monitor',
       },
     ],
-    brochureUrl: '/brochures/patient-monitor.pdf',
+    brochureUrl: '/brochures/getinge.pdf',
   },
 ];
 
-async function seedProducts() {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI);
-    console.log('Connected to MongoDB');
+// async function seedProducts() {
+//   try {
+//     await mongoose.connect(process.env.MONGODB_URI);
+//     console.log('Connected to MongoDB');
     
-    // Clear existing products
-    await Product.deleteMany({});
-    console.log('Cleared existing products');
+//     // Clear existing products
+//     await Product.deleteMany({});
+//     console.log('Cleared existing products');
     
-    // Insert new products
-    await Product.insertMany(PRODUCTS);
-    console.log('Successfully seeded products database');
+//     // Insert new products
+//     await Product.insertMany(PRODUCTS);
+//     console.log('Successfully seeded products database');
     
-    process.exit(0);
-  } catch (error) {
-    console.error('Error seeding database:', error);
-    process.exit(1);
-  }
-}
+//     process.exit(0);
+//   } catch (error) {
+//     console.error('Error seeding database:', error);
+//     process.exit(1);
+//   }
+// }
 
-seedProducts();
+// seedProducts();

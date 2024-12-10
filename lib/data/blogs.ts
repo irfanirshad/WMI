@@ -17,94 +17,131 @@ export interface Blog {
 }
 
 export const blogs: Blog[] = [
-  {
-    id: '1',
-    title: 'The Future of Medical Imaging',
-    slug: 'future-of-medical-imaging',
-    content: `
-      The field of medical imaging is experiencing rapid advancement with the integration of artificial intelligence and machine learning technologies. These innovations are revolutionizing how healthcare professionals diagnose and treat patients.
-
-      Modern imaging systems now offer unprecedented clarity and detail, allowing for earlier detection of various conditions. The integration of AI assists radiologists in identifying patterns and anomalies that might be missed by the human eye alone.
-
-      Key developments include:
-      - Advanced 3D visualization
-      - Real-time image processing
-      - AI-assisted diagnosis
-      - Reduced radiation exposure
-      - Faster scan times
-
-      These improvements not only enhance diagnostic accuracy but also improve patient comfort and safety during procedures.
-    `,
-    excerpt: 'Exploring the latest advancements in medical imaging technology and how AI is transforming diagnostic capabilities.',
-    author: {
-      name: 'Dr. Sarah Ahmed',
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2'
-    },
-    coverImage: {
-      url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
-      alt: 'Medical Imaging Future'
-    },
-    category: 'medical',
-    publishedAt: '2024-03-15'
-  },
-  {
-    id: '2',
-    title: 'Modern CSSD Practices',
-    slug: 'modern-cssd-practices',
-    content: `
-      Central Sterile Supply Department (CSSD) practices have evolved significantly in recent years, incorporating automation and advanced sterilization techniques to ensure the highest standards of infection control.
-
-      Modern CSSD facilities utilize state-of-the-art equipment and validated processes to maintain sterility assurance levels. The implementation of tracking systems and quality controls has greatly improved efficiency and safety.
-
-      Key aspects of modern CSSD operations:
-      - Automated washing and disinfection
-      - Computer-controlled sterilization cycles
-      - Real-time monitoring systems
-      - Validated packaging methods
-      - Electronic documentation
-
-      These advancements ensure consistent sterilization results and enhance patient safety.
-    `,
-    excerpt: 'Understanding modern sterilization techniques and practices in Central Sterile Supply Departments.',
-    author: {
-      name: 'Eng. Mohammed Ali',
-      image: 'https://images.unsplash.com/photo-1556157382-97eda2f9e2bf'
-    },
-    coverImage: {
-      url: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
-      alt: 'CSSD Practices'
-    },
-    category: 'medical',
-    publishedAt: '2024-03-10'
-  },
-  {
-    id: '3',
-    title: 'Industrial Automation Trends 2024',
-    slug: 'industrial-automation-trends-2024',
-    content: `
-      The industrial automation sector is witnessing significant transformations in 2024, with new technologies reshaping manufacturing processes and operational efficiency.
-
-      Smart factories are becoming increasingly common, leveraging IoT devices and advanced robotics to create more efficient and flexible production lines. The integration of AI and machine learning is enabling predictive maintenance and real-time optimization.
-
-      Key trends include:
-      - Advanced robotics and cobots
-      - IoT-enabled equipment monitoring
-      - AI-driven process optimization
-      - Digital twin technology
-      - Edge computing applications
-
-      These innovations are helping manufacturers improve productivity while reducing operational costs.
-    `,
-    excerpt: 'Key trends shaping the future of industrial automation and manufacturing efficiency.',
-    author: {
-      name: 'Eng. Abdullah Al-Otaibi',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e'
-    },
-    coverImage: {
-      url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
-      alt: 'Industrial Automation'
-    },
-    category: 'industrial',
-    publishedAt: '2024-03-05'
-  }
-];
+    {
+      id: '1',
+      title: 'Revolutionizing Medical Gas Systems',
+      slug: 'revolutionizing-medical-gas-systems',
+      content: `
+        Medical gas systems are critical to modern healthcare infrastructure. Recent innovations in monitoring and safety measures ensure that hospitals can provide uninterrupted, high-quality care.
+  
+        The adoption of IoT and real-time analytics in medical gas management is paving the way for smarter, safer, and more efficient operations.
+      `,
+      excerpt: 'How innovative technologies are improving medical gas systems for better patient care.',
+      author: {
+        name: 'Eng. Haroon Hamdan',
+        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a'
+      },
+      coverImage: {
+        url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+        alt: 'Medical Gas Systems'
+      },
+      category: 'medical',
+      publishedAt: '2024-03-20'
+    },
+    {
+      id: '2',
+      title: 'Modern Practices in CSSD Management',
+      slug: 'modern-cssd-management',
+      content: `
+        Central Sterile Supply Departments (CSSD) play a pivotal role in infection control. This article explores the latest techniques and technologies transforming sterilization processes.
+  
+        Automation, tracking systems, and enhanced sterilization protocols ensure higher efficiency and patient safety.
+      `,
+      excerpt: 'Exploring advanced sterilization methods and innovations in CSSD practices.',
+      author: {
+        name: 'Eng. M.M. Irshad',
+        image: 'https://images.unsplash.com/photo-1556157382-97eda2f9e2bf'
+      },
+      coverImage: {
+        url: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
+        alt: 'CSSD Innovations'
+      },
+      category: 'medical',
+      publishedAt: '2024-03-18'
+    },
+    {
+      id: '3',
+      title: 'Customer Support Excellence in Healthcare',
+      slug: 'customer-support-excellence-healthcare',
+      content: `
+        Effective customer support is essential for maintaining trust and satisfaction in the healthcare industry. This article highlights best practices for delivering outstanding support.
+  
+        From proactive communication to personalized solutions, the role of customer support is evolving to meet higher expectations.
+      `,
+      excerpt: 'Best practices for delivering exceptional customer support in the healthcare sector.',
+      author: {
+        name: 'Mr. Khalid Hassen',
+        image: 'https://images.unsplash.com/photo-1679496125396-8d01c968d071'
+      },
+      coverImage: {
+        url: 'https://images.unsplash.com/photo-1679496125396-8d01c968d071',
+        alt: 'Customer Support'
+      },
+      category: 'customer-support',
+      publishedAt: '2024-03-15'
+    },
+    {
+      id: '4',
+      title: 'Advances in Industrial Automation',
+      slug: 'advances-industrial-automation',
+      content: `
+        Industrial automation continues to shape the manufacturing landscape. This post examines the latest technologies driving efficiency and productivity, including robotics and IoT.
+  
+        These advancements not only optimize production but also contribute to safer workplace environments.
+      `,
+      excerpt: 'Exploring how industrial automation is enhancing manufacturing efficiency and safety.',
+      author: {
+        name: 'Eng. Josh CF Jirch',
+        image: 'https://images.unsplash.com/photo-1501426026826-31c667bdf23d'
+      },
+      coverImage: {
+        url: 'https://images.unsplash.com/photo-1501426026826-31c667bdf23d',
+        alt: 'Industrial Automation'
+      },
+      category: 'industrial',
+      publishedAt: '2024-03-10'
+    },
+    {
+      id: '5',
+      title: 'Financial Management in Medical Establishments',
+      slug: 'financial-management-medical-establishments',
+      content: `
+        Financial management in the medical sector requires a unique approach to balance cost-efficiency with quality care. Learn how modern tools and practices can streamline financial operations.
+  
+        From budgeting to compliance, financial managers face a range of challenges and opportunities in this dynamic field.
+      `,
+      excerpt: 'Effective financial strategies for medical establishments.',
+      author: {
+        name: 'Mr. Mohammed Heiba',
+        image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4'
+      },
+      coverImage: {
+          url: 'https://images.unsplash.com/photo-1501426026826-31c667bdf23d',
+          alt: 'Financial Management'
+      },
+      category: 'finance',
+      publishedAt: '2024-03-05'
+    },
+    {
+      id: '6',
+      title: 'Ensuring Sterility in Critical Healthcare Environments',
+      slug: 'ensuring-sterility-critical-healthcare',
+      content: `
+        Maintaining sterility in healthcare environments is essential to prevent infections. This article discusses the role of CSSD managers and the importance of adherence to protocols.
+  
+        Modern equipment and continuous training are key to achieving excellence in sterility assurance.
+      `,
+      excerpt: 'The role of CSSD managers in maintaining sterile environments in healthcare facilities.',
+      author: {
+        name: 'Eng. Jabir Sideeque',
+        image: 'https://images.unsplash.com/photo-1679496125396-8d01c968d071'
+      },
+      coverImage: {
+        url: 'https://images.unsplash.com/photo-1679496125396-8d01c968d071',
+        alt: 'Healthcare Sterility'
+      },
+      category: 'medical',
+      publishedAt: '2024-03-03'
+    }
+  ];
+  
