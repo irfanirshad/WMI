@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { blogs } from '@/lib/data/blogs';
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
+export const dynamic = "auto";
 
 export async function GET(
   request: Request,

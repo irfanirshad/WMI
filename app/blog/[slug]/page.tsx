@@ -10,10 +10,12 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
+  console.log('Static params:', blogs.map(blog => ({ slug: blog.slug })));
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
+
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const post = blogs.find(blog => blog.slug === params.slug);

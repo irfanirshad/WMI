@@ -1,7 +1,14 @@
 import { NextResponse } from 'next/server';
 import { products } from '@/lib/data/products';
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
+export const dynamic = "auto";
+
+// Predefine all routes
+export async function generateStaticParams() {
+  return products.map(product => ({ id: product.id }));
+}
+
 
 export async function GET(
   request: Request,
