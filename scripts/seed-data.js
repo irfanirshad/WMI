@@ -99,38 +99,133 @@ const PRODUCTS = [
   }
 ];
 
+// const BLOGS = [
+//   {
+//     title: 'The Future of Medical Imaging',
+//     slug: 'future-of-medical-imaging',
+//     content: 'Detailed analysis of upcoming medical imaging technologies...',
+//     excerpt: 'Exploring the latest advancements in medical imaging technology.',
+//     author: {
+//       name: 'Dr. Sarah Ahmed',
+//       image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2'
+//     },
+//     coverImage: {
+//       url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
+//       alt: 'Medical Imaging Future'
+//     },
+//     category: 'medical'
+//   },
+//   {
+//     title: 'Modern CSSD Practices',
+//     slug: 'modern-cssd-practices',
+//     content: 'Best practices for modern central sterile supply departments...',
+//     excerpt: 'Understanding modern sterilization techniques and practices.',
+//     author: {
+//       name: 'Eng. Mohammed Ali',
+//       image: 'https://images.unsplash.com/photo-1556157382-97eda2f9e2bf'
+//     },
+//     coverImage: {
+//       url: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
+//       alt: 'CSSD Practices'
+//     },
+//     category: 'medical'
+//   }
+// ];
+
 const BLOGS = [
   {
-    title: 'The Future of Medical Imaging',
-    slug: 'future-of-medical-imaging',
-    content: 'Detailed analysis of upcoming medical imaging technologies...',
-    excerpt: 'Exploring the latest advancements in medical imaging technology.',
+    title: 'Revolutionizing Medical Gas Systems',
+    slug: 'revolutionizing-medical-gas-systems',
+    content: 'Exploring advancements in medical gas distribution and management systems.',
+    excerpt: 'How innovation is changing the landscape of medical gas solutions.',
     author: {
-      name: 'Dr. Sarah Ahmed',
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2'
+      name: 'Eng. Haroon Hamdan',
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2',
     },
     coverImage: {
       url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
-      alt: 'Medical Imaging Future'
+      alt: 'Medical Gas Systems',
     },
-    category: 'medical'
+    category: 'medical',
   },
   {
-    title: 'Modern CSSD Practices',
-    slug: 'modern-cssd-practices',
+    title: 'Modern CSSD Management',
+    slug: 'modern-cssd-management',
     content: 'Best practices for modern central sterile supply departments...',
     excerpt: 'Understanding modern sterilization techniques and practices.',
     author: {
-      name: 'Eng. Mohammed Ali',
-      image: 'https://images.unsplash.com/photo-1556157382-97eda2f9e2bf'
+      name: 'Eng. M M Irshad',
+      image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
     },
     coverImage: {
       url: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
-      alt: 'CSSD Practices'
+      alt: 'CSSD Practices',
     },
-    category: 'medical'
-  }
+    category: 'medical',
+  },
+  {
+    title: 'Customer Support Excellence in Healthcare',
+    slug: 'customer-support-excellence-healthcare',
+    content: 'Strategies for enhancing customer support in healthcare settings.',
+    excerpt: 'Improving client-patient interaction with innovative support models.',
+    author: {
+      name: 'Mr. Kalid Hassen',
+      image: 'https://images.unsplash.com/photo-1556157382-97eda2f9e2bf',
+    },
+    coverImage: {
+      url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
+      alt: 'Customer Support',
+    },
+    category: 'support',
+  },
+  {
+    title: 'Advances in Industrial Automation',
+    slug: 'advances-industrial-automation',
+    content: 'Key trends and technologies shaping manufacturing and logistics.',
+    excerpt: 'Explore how new industrial automation techniques are improving efficiency.',
+    author: {
+      name: 'Eng. Jabirsideeque',
+      image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
+    },
+    coverImage: {
+      url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
+      alt: 'Industrial Trends',
+    },
+    category: 'industry',
+  },
+  {
+    title: 'Financial Management in Medical Establishments',
+    slug: 'financial-management-medical-establishments',
+    content: 'Understanding financial models for efficient healthcare management.',
+    excerpt: 'How financial strategies impact healthcare delivery.',
+    author: {
+      name: 'Mr. Mohammed Heiba',
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2',
+    },
+    coverImage: {
+      url: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',
+      alt: 'Financial Strategies',
+    },
+    category: 'finance',
+  },
+  {
+    title: 'Ensuring Sterility in Critical Healthcare Operations',
+    slug: 'ensuring-sterility-critical-healthcare',
+    content: 'A detailed guide on maintaining optimal sterility standards.',
+    excerpt: 'The role of hygiene and preparation in critical operations.',
+    author: {
+      name: 'Mr. Omerdein',
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2',
+    },
+    coverImage: {
+      url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514',
+      alt: 'Sterility in Operations',
+    },
+    category: 'medical',
+  },
 ];
+
+
 
 const PROJECTS = [
   {

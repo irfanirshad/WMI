@@ -50,7 +50,7 @@ export const blogs: Blog[] = [
       excerpt: 'Exploring advanced sterilization methods and innovations in CSSD practices.',
       author: {
         name: 'Eng. M.M. Irshad',
-        image: 'https://images.unsplash.com/photo-1556157382-97eda2f9e2bf'
+        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a'
       },
       coverImage: {
         url: 'https://images.unsplash.com/photo-1579154204601-01588f351e67',

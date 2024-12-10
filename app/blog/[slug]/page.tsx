@@ -9,6 +9,9 @@ interface BlogPostPageProps {
   };
 }
 
+export const dynamic = "auto";
+
+
 export async function generateStaticParams() {
   console.log('Static params:', blogs.map(blog => ({ slug: blog.slug })));
   return blogs.map((blog) => ({

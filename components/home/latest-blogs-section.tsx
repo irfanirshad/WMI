@@ -6,29 +6,31 @@ import { Button } from '@/components/ui/button';
 import { SectionHeader } from '@/components/ui/section-header';
 import { BlogCard } from '@/components/home/blog-card';
 
+
 const LATEST_POSTS = [
   {
-    title: 'Latest Advances in Medical Imaging Technology',
-    description: 'Exploring the newest developments in diagnostic imaging equipment and their impact on healthcare.',
-    date: '2024-03-15',
+    title: 'Revolutionizing Medical Gas Systems',
+    description: 'Exploring advancements in medical gas distribution and management systems.',
+    date: '2024-12-10',
     readTime: '5 min read',
-    slug: 'latest-advances-medical-imaging',
+    slug: 'revolutionizing-medical-gas-systems',
   },
   {
-    title: 'Industrial Automation Trends 2024',
-    description: 'Key trends shaping the future of industrial automation and manufacturing efficiency.',
-    date: '2024-03-10',
+    title: 'Modern CSSD Management',
+    description: 'Best practices for modern central sterile supply departments.',
+    date: '2024-12-08',
     readTime: '4 min read',
-    slug: 'industrial-automation-trends-2024',
+    slug: 'modern-cssd-management',
   },
   {
-    title: 'Healthcare Equipment Maintenance Guide',
-    description: 'Best practices for maintaining medical equipment to ensure optimal performance and longevity.',
-    date: '2024-03-05',
-    readTime: '6 min read',
-    slug: 'healthcare-equipment-maintenance',
+    title: 'Financial Management in Medical Establishments',
+    description: 'Understanding financial strategies for smooth healthcare operations.',
+    date: '2024-12-01',
+    readTime: '4 min read',
+    slug: 'financial-management-medical-establishments',
   },
 ];
+
 
 export function LatestBlogsSection() {
   return (
