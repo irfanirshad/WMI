@@ -16,24 +16,10 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 import { contactSchema } from '@/lib/validations/contact';
 import type { z } from 'zod';
 
 type ContactFormValues = z.infer<typeof contactSchema>;
-
-const INQUIRY_TYPES = [
-  { value: 'general', label: 'General Inquiry' },
-  { value: 'support', label: 'Technical Support' },
-  { value: 'sales', label: 'Sales' },
-  { value: 'career', label: 'Career' },
-];
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,33 +27,34 @@ export function ContactForm() {
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
-    defaultValues: {
-      type: 'general',
-    },
   });
 
-  async function onSubmit(data: ContactFormValues) {
+  const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'; // Replace with your Formspree endpoint
+
+  async function handleFormSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(data),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit form');
+        throw new Error('Error submitting the form');
       }
 
       toast({
-        title: 'Message sent successfully',
-        description: 'We will get back to you as soon as possible.',
+        title: 'Form sent successfully!',
+        description: 'We will get back to you soon.',
       });
       form.reset();
     } catch (error) {
       toast({
         title: 'Error',
-        description: 'Failed to send message. Please try again.',
+        description: 'Something went wrong. Please try again.',
         variant: 'destructive',
       });
     } finally {
@@ -80,41 +67,14 @@ export function ContactForm() {
       <div>
         <h1 className="text-3xl font-bold tracking-tight">Contact Us</h1>
         <p className="text-muted-foreground mt-2">
-          Fill out the form below and we&apos;ll get back to you as soon as possible.
+          Fill out the form below and we'll get back to you as soon as possible.
         </p>
       </div>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <FormField
-            control={form.control}
-            name="type"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Inquiry Type</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select inquiry type" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {INQUIRY_TYPES.map((type) => (
-                      <SelectItem key={type.value} value={type.value}>
-                        {type.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
+        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Name Field */}
             <FormField
               control={form.control}
               name="name"
@@ -129,6 +89,7 @@ export function ContactForm() {
               )}
             />
 
+            {/* Email Field */}
             <FormField
               control={form.control}
               name="email"
@@ -145,12 +106,13 @@ export function ContactForm() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Phone Number Field */}
             <FormField
               control={form.control}
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone</FormLabel>
+                  <FormLabel>Phone Number</FormLabel>
                   <FormControl>
                     <Input placeholder="Your phone number" {...field} />
                   </FormControl>
@@ -159,6 +121,7 @@ export function ContactForm() {
               )}
             />
 
+            {/* Company Field */}
             <FormField
               control={form.control}
               name="company"
@@ -174,6 +137,7 @@ export function ContactForm() {
             />
           </div>
 
+          {/* Message Field */}
           <FormField
             control={form.control}
             name="message"
@@ -192,6 +156,7 @@ export function ContactForm() {
             )}
           />
 
+          {/* Submit Button */}
           <Button type="submit" className="w-full" disabled={isSubmitting}>
             {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             Send Message
