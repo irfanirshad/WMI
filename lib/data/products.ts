@@ -31,7 +31,7 @@ export const products: Product[] = [
       url: 'https://images.unsplash.com/photo-1583912372139-6a46eb6eb119',
       alt: 'Liquid Oxygen Storage Tank'
     }],
-    brochureUrl: '/brochures/getinge-1.pdf'
+    brochureUrl: '/brochures/getinge.pdf'
   },
   {
     id: '2',
